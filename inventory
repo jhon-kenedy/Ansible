@@ -1,0 +1,16 @@
+[zookeeper]
+Teju-C1    zookeeper_id=1
+Teju-C2    zookeeper_id=2
+Teju-C3    zookeeper_id=3
+
+[kafka]
+Teju-C1   kafka_broker_id=1
+Teju-C2   kafka_broker_id=2
+Teju-C3   kafka_broker_id=3
+
+[kafka_cluster:children]
+zookeeper
+kafka
+
+[kafka_cluster:vars]
+ansible_user=ansibleuser
